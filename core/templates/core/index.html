@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load staticfiles%}
+	<meta charset="UTF-8">
+	<title>Main page</title>
+
+	
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="caption"> Введите имя:</div> <br>
+
+	<input type="text" id="name" maxlength="200" autofocus >
+	<input type="button" value = "Ok" id="okBut" >
+
+	<div class="caption" id="text"> </div>
+</body>
+
+<script>
+	$("#okBut").click(function(){
+		if($("#name").val()){
+			$.ajax({
+				type:"GET",
+				url: "home",
+				data: { name: $("#name").val() }
+			}).done(function(data) {
+				$("#text").html(data);
+				});
+	}
+	});
+
+</script>
+</html>

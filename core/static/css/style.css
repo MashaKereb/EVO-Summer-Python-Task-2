@@ -1,0 +1,33 @@
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+
+input[type=button] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.caption{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+        font-size: 48px;
+        line-height: 40px;
+        letter-spacing: -1px;
+        color: #444;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        font-weight: 100;
+}
